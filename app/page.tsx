@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 const TABS = ['overview', 'lore', 'campaign', 'calendar', 'todos', 'chat'] as const
 type Tab = typeof TABS[number]
 
-const TODOS_KEY = 'gimbos-todos-v1'
+const TODOS_KEY = 'gimboz-todos-v1'
 
 interface Todo {
   id: string
@@ -18,16 +18,16 @@ interface Todo {
 const INITIAL_TODOS: Todo[] = [
   { id: '1', text: 'Announce mint date (March 26 — not public yet)', done: false, category: 'Mint', priority: 'high' },
   { id: '2', text: 'Confirm mint price + mechanic (free for WL? public price?)', done: false, category: 'Mint', priority: 'high' },
-  { id: '3', text: 'Confirm total Gimbos collection size', done: false, category: 'Mint', priority: 'high' },
+  { id: '3', text: 'Confirm total Gimboz collection size', done: false, category: 'Mint', priority: 'high' },
   { id: '4', text: 'Post Deacon reveal (image + Variant B copy) on @apechurch', done: false, category: 'Content', priority: 'high' },
-  { id: '5', text: 'Get Geez (@GeezOnApe) to add Gimbos to marketplace (buy with PNUTZ)', done: false, category: 'Partnerships', priority: 'high' },
+  { id: '5', text: 'Get Geez (@GeezOnApe) to add Gimboz to marketplace (buy with PNUTZ)', done: false, category: 'Partnerships', priority: 'high' },
   { id: '6', text: 'Post The Altar image + lore copy on @apechurch', done: false, category: 'Content', priority: 'mid' },
   { id: '7', text: 'Post The Threshold image + lore copy on @apechurch', done: false, category: 'Content', priority: 'mid' },
   { id: '8', text: 'Drop Blessed vs Fallen split — "which one are you?" poll', done: false, category: 'Content', priority: 'mid' },
   { id: '9', text: 'Announce mint date publicly (March 21 or after)', done: false, category: 'Mint', priority: 'mid' },
   { id: '10', text: 'Cross-chain marketing push — Solana/Base degen targeting', done: false, category: 'Marketing', priority: 'mid' },
   { id: '11', text: 'Identify 3 streamers to pitch "I joined a frog cult casino"', done: false, category: 'Marketing', priority: 'low' },
-  { id: '12', text: 'Build mint page / landing page for Gimbos', done: false, category: 'Dev', priority: 'mid' },
+  { id: '12', text: 'Build mint page / landing page for Gimboz', done: false, category: 'Dev', priority: 'mid' },
   { id: '13', text: 'Final push content (Mar 24-25) — countdown posts', done: false, category: 'Content', priority: 'low' },
   { id: '14', text: 'Mint day post — "The altar is open."', done: false, category: 'Content', priority: 'low' },
 ]
@@ -212,7 +212,7 @@ export default function Home() {
 
       <div className="app">
         <div className="header">
-          <div className="logo">🐸 Gimbos <span>HQ</span></div>
+          <div className="logo">🐸 Gimboz <span>HQ</span></div>
           <div className="subtitle">Ape Church Command Center — built by Cello</div>
         </div>
 
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
 
             <div className="section">
-              <div className="section-title">What Gimbos Are</div>
+              <div className="section-title">What Gimboz Are</div>
               <div className="card">
                 <p>Ancient frog creatures that evolved from tadpoles in the margins of the Otherside. They built the Church — the oldest structure in the Otherside — before the Apes arrived. Their religion is <span className="highlight">chance itself</span>. They gather at the altar, make offerings, throw the runestones, and play games of chance as an act of worship. They are degens. They are true believers. Same thing.</p>
               </div>
@@ -274,7 +274,7 @@ export default function Home() {
               <div className="card">
                 <h3>🤝 Key Partnerships</h3>
                 <p style={{marginTop: 8, fontSize: 13, lineHeight: 2}}>
-                  <span style={{display: 'block'}}>→ <span className="highlight">@GeezOnApe</span> — add Gimbos to marketplace, buyable with PNUTZ</span>
+                  <span style={{display: 'block'}}>→ <span className="highlight">@GeezOnApe</span> — add Gimboz to marketplace, buyable with PNUTZ</span>
                   <span style={{display: 'block'}}>→ <span className="highlight">@Bayc364</span> — platform builder, align on mint mechanics</span>
                   <span style={{display: 'block'}}>→ <span className="highlight">@apecoin</span> — ecosystem alignment, cross-promote</span>
                 </p>
@@ -297,12 +297,12 @@ export default function Home() {
               <div className="section-title">The World — Locked Art</div>
               <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:12,marginBottom:8}}>
                 {[
-                  {src:'/gimbos/01_the_threshold.png', title:'The Threshold', sub:'Every Gimbo starts here. You found the door.'},
-                  {src:'/gimbos/03_the_deacon.png', title:'The Deacon', sub:'Been here since before the walls. Seen everything.'},
-                  {src:'/gimbos/04_the_altar.png', title:'The Altar', sub:'Where it happens. Where the universe answers.'},
-                  {src:'/gimbos/05a_the_knowing.png', title:'The Knowing', sub:'Won. Not celebrating. Just knows something.'},
-                  {src:'/gimbos/05a_the_knowing_b.png', title:'The Knowing II', sub:'Everyone else left. Still here.'},
-                  {src:'/gimbos/05b_the_fallen.png', title:'The Fallen', sub:'Lost everything. Still kneeling. Still here.'},
+                  {src:'/gimboz/01_the_threshold.png', title:'The Threshold', sub:'Every Gimbo starts here. You found the door.'},
+                  {src:'/gimboz/03_the_deacon.png', title:'The Deacon', sub:'Been here since before the walls. Seen everything.'},
+                  {src:'/gimboz/04_the_altar.png', title:'The Altar', sub:'Where it happens. Where the universe answers.'},
+                  {src:'/gimboz/05a_the_knowing.png', title:'The Knowing', sub:'Won. Not celebrating. Just knows something.'},
+                  {src:'/gimboz/05a_the_knowing_b.png', title:'The Knowing II', sub:'Everyone else left. Still here.'},
+                  {src:'/gimboz/05b_the_fallen.png', title:'The Fallen', sub:'Lost everything. Still kneeling. Still here.'},
                 ].map((img,i) => (
                   <div key={i} style={{background:'#0d0d0a',border:'1px solid #2a2a1a',borderRadius:8,overflow:'hidden'}}>
                     <img src={img.src} alt={img.title} style={{width:'100%',height:220,objectFit:'cover',display:'block'}} />
@@ -319,7 +319,7 @@ export default function Home() {
               <div className="section-title">What Is a Gimbo</div>
               <div className="lore-block">
                 <h4>A frog that found the church.</h4>
-                <p>Not because they were chosen. Not because they were worthy. Because they were at the altar when everyone else was somewhere else being careful. Gimbos don't play it safe. They showed up with whatever they had, put it on the altar, and waited. Sometimes the altar answered. Sometimes it didn't. They came back anyway. That's the whole thing.</p>
+                <p>Not because they were chosen. Not because they were worthy. Because they were at the altar when everyone else was somewhere else being careful. Gimboz don't play it safe. They showed up with whatever they had, put it on the altar, and waited. Sometimes the altar answered. Sometimes it didn't. They came back anyway. That's the whole thing.</p>
               </div>
               <div className="lore-block">
                 <h4>Playing Is Praying</h4>
@@ -330,7 +330,7 @@ export default function Home() {
             <div className="section">
               <div className="section-title">The Deacon</div>
               <div style={{display:'grid',gridTemplateColumns:'200px 1fr',gap:20,alignItems:'start'}}>
-                <img src="/gimbos/03_the_deacon.png" alt="The Deacon" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
+                <img src="/gimboz/03_the_deacon.png" alt="The Deacon" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
                 <div>
                   <div className="lore-block" style={{marginBottom:12}}>
                     <h4>Nobody knows when he arrived.</h4>
@@ -352,14 +352,14 @@ export default function Home() {
               <div className="section-title">Blessed and Fallen</div>
               <div className="grid2">
                 <div style={{background:'#0d0d08',border:'1px solid #3a3a1a',borderRadius:8,overflow:'hidden'}}>
-                  <img src="/gimbos/05a_the_knowing.png" alt="The Knowing" style={{width:'100%',height:180,objectFit:'cover'}} />
+                  <img src="/gimboz/05a_the_knowing.png" alt="The Knowing" style={{width:'100%',height:180,objectFit:'cover'}} />
                   <div style={{padding:16}}>
                     <div style={{fontSize:13,fontWeight:700,color:'#c8a84b',marginBottom:8}}>The Blessed</div>
                     <p style={{fontSize:13,color:'#888',lineHeight:1.7}}>The altar answered. You won. You're not celebrating — you're sitting with it. Something shifted. You understand something now that can't be explained to someone who hasn't stood at the altar and waited. You'll be back next week. Not out of greed. Out of knowing.</p>
                   </div>
                 </div>
                 <div style={{background:'#0d0808',border:'1px solid #3a1a1a',borderRadius:8,overflow:'hidden'}}>
-                  <img src="/gimbos/05b_the_fallen.png" alt="The Fallen" style={{width:'100%',height:180,objectFit:'cover'}} />
+                  <img src="/gimboz/05b_the_fallen.png" alt="The Fallen" style={{width:'100%',height:180,objectFit:'cover'}} />
                   <div style={{padding:16}}>
                     <div style={{fontSize:13,fontWeight:700,color:'#c85a5a',marginBottom:8}}>The Fallen</div>
                     <p style={{fontSize:13,color:'#888',lineHeight:1.7}}>The altar was silent. You lost. You're still kneeling. Still there, in the dark, after everyone else left. You'll be back next week. That's the faith — not believing you'll win. Believing it's always worth the throw. The Fallen are the most devoted members of the church.</p>
@@ -378,7 +378,7 @@ export default function Home() {
                     <p>The altar has been here longer than the church. Nobody found it and claimed it. It was just there — in the middle of where the church eventually grew up around it. The altar doesn't speak. It doesn't move. It receives offerings and it decides. There is no formula. No trick. No optimal play. What the altar rewards is commitment. Not caution.</p>
                   </div>
                 </div>
-                <img src="/gimbos/04_the_altar.png" alt="The Altar" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
+                <img src="/gimboz/04_the_altar.png" alt="The Altar" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
               </div>
             </div>
 
@@ -386,7 +386,7 @@ export default function Home() {
               <div className="section-title">Voice Guide</div>
               <div className="card">
                 <p style={{lineHeight:2, fontSize:13}}>
-                  <span className="highlight">Tone:</span> Chaotic. Sincere. Committed to the bit. The joke is that Gimbos are completely serious. Never wink at the camera.<br/>
+                  <span className="highlight">Tone:</span> Chaotic. Sincere. Committed to the bit. The joke is that Gimboz are completely serious. Never wink at the camera.<br/>
                   <span className="green">Write like this:</span> "The altar is open." / "Playing is praying." / "The Deacon nods." / "Church."<br/>
                   <span style={{color:'#c85a5a'}}>Never write:</span> "Exciting NFT drop" / "Join our community" / "Rare collectible" / anything that sounds like a press release.<br/>
                   <span className="highlight">The closing word:</span> Church. Use it sparingly. Only when something true just happened.
@@ -449,7 +449,7 @@ export default function Home() {
                 </div>
                 <div className="card">
                   <h3>OG x Ape Church</h3>
-                  <p style={{marginTop: 8}}>Gimbos-themed Saturday event. Gimbo holders get priority queue or special game mode. Cross-pollinates OG's Otherside audience into Ape Church funnel.</p>
+                  <p style={{marginTop: 8}}>Gimboz-themed Saturday event. Gimbo holders get priority queue or special game mode. Cross-pollinates OG's Otherside audience into Ape Church funnel.</p>
                 </div>
               </div>
             </div>
@@ -530,12 +530,12 @@ export default function Home() {
             <div className="section">
               <div className="section-title">Chat with Cello</div>
               <div className="notice" style={{marginBottom: 12}}>
-                Messages are sent to Cello's workspace. Responses appear here within a few minutes (next heartbeat check). Keep the context about Gimbos, Ape Church, or campaign decisions.
+                Messages are sent to Cello's workspace. Responses appear here within a few minutes (next heartbeat check). Keep the context about Gimboz, Ape Church, or campaign decisions.
               </div>
               <div className="chat-window">
                 {chatMessages.length === 0 && (
                   <div style={{color: '#444', fontSize: 13, textAlign: 'center', marginTop: 40}}>
-                    No messages yet. Ask Cello anything about the Gimbos campaign.
+                    No messages yet. Ask Cello anything about the Gimboz campaign.
                   </div>
                 )}
                 {chatMessages.map(msg => (
@@ -549,7 +549,7 @@ export default function Home() {
               </div>
               <div className="chat-input-row">
                 <input
-                  placeholder="Ask Cello about the Gimbos campaign..."
+                  placeholder="Ask Cello about the Gimboz campaign..."
                   value={chatInput}
                   onChange={e => setChatInput(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && sendChat()}
