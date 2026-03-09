@@ -16,37 +16,30 @@ interface Todo {
 }
 
 const INITIAL_TODOS: Todo[] = [
-  { id: '1', text: 'Post speculation video (today)', done: false, category: 'Content', priority: 'high' },
-  { id: '2', text: 'Write Gimbos lore (full Book of Gimbo)', done: false, category: 'Lore', priority: 'high' },
-  { id: '3', text: 'Get Geez (@GeezOnApe) to add Gimbos to their marketplace (buy with PNUTZ)', done: false, category: 'Partnerships', priority: 'high' },
-  { id: '4', text: 'Confirm mint price + mechanic (free for WL winners? public price?)', done: false, category: 'Mint', priority: 'high' },
-  { id: '5', text: 'Confirm total Gimbos collection size', done: false, category: 'Mint', priority: 'high' },
-  { id: '6', text: 'Lock March 20 mint date (tentative)', done: false, category: 'Mint', priority: 'mid' },
-  { id: '7', text: 'Commission "The Last Offering" art (Renaissance Last Supper with Gimbos)', done: false, category: 'Content', priority: 'mid' },
-  { id: '8', text: 'Create faction lore posts (Stone, Void, Forest, Tech, Warrior)', done: false, category: 'Content', priority: 'mid' },
-  { id: '9', text: 'Set up Gimbos-specific Twitter account OR confirm @ape_church is the handle', done: false, category: 'Socials', priority: 'mid' },
+  { id: '1', text: 'Announce mint date (March 26 — not public yet)', done: false, category: 'Mint', priority: 'high' },
+  { id: '2', text: 'Confirm mint price + mechanic (free for WL? public price?)', done: false, category: 'Mint', priority: 'high' },
+  { id: '3', text: 'Confirm total Gimbos collection size', done: false, category: 'Mint', priority: 'high' },
+  { id: '4', text: 'Post Deacon reveal (image + Variant B copy) on @apechurch', done: false, category: 'Content', priority: 'high' },
+  { id: '5', text: 'Get Geez (@GeezOnApe) to add Gimbos to marketplace (buy with PNUTZ)', done: false, category: 'Partnerships', priority: 'high' },
+  { id: '6', text: 'Post The Altar image + lore copy on @apechurch', done: false, category: 'Content', priority: 'mid' },
+  { id: '7', text: 'Post The Threshold image + lore copy on @apechurch', done: false, category: 'Content', priority: 'mid' },
+  { id: '8', text: 'Drop Blessed vs Fallen split — "which one are you?" poll', done: false, category: 'Content', priority: 'mid' },
+  { id: '9', text: 'Announce mint date publicly (March 21 or after)', done: false, category: 'Mint', priority: 'mid' },
   { id: '10', text: 'Cross-chain marketing push — Solana/Base degen targeting', done: false, category: 'Marketing', priority: 'mid' },
-  { id: '11', text: 'Plan OG x Ape Church collab event on Otherside', done: false, category: 'Partnerships', priority: 'mid' },
-  { id: '12', text: 'Identify 3 streamers to pitch "I joined a frog cult casino"', done: false, category: 'Marketing', priority: 'low' },
-  { id: '13', text: 'Build "Vitruvian Gimbo" visual for normie/art Twitter', done: false, category: 'Content', priority: 'low' },
-  { id: '14', text: 'Write cross-chain onboarding copy ("the crossing" ritual framing)', done: false, category: 'Content', priority: 'low' },
+  { id: '11', text: 'Identify 3 streamers to pitch "I joined a frog cult casino"', done: false, category: 'Marketing', priority: 'low' },
+  { id: '12', text: 'Build mint page / landing page for Gimbos', done: false, category: 'Dev', priority: 'mid' },
+  { id: '13', text: 'Final push content (Mar 24-25) — countdown posts', done: false, category: 'Content', priority: 'low' },
+  { id: '14', text: 'Mint day post — "The altar is open."', done: false, category: 'Content', priority: 'low' },
 ]
 
 const CALENDAR_EVENTS = [
-  { date: 'Feb 27', label: 'TODAY', items: ['Speculation video drop', 'Campaign planning session'] },
-  { date: 'Feb 28', label: 'SAT', items: ['OG x Typical Tigers event (3PM EST)', 'Faction lore drop: Stone Gimbo'] },
-  { date: 'Mar 1', label: 'SUN', items: ['Into The Otherside — Papichulomeme (3PM EST)', 'Faction lore drop: Void Gimbo'] },
-  { date: 'Mar 2', label: 'MON', items: ['Faction lore drop: Forest Gimbo'] },
-  { date: 'Mar 3', label: 'TUE', items: ['OG Chaos Trials (9PM EST)', 'Faction lore drop: Tech Gimbo'] },
-  { date: 'Mar 4', label: 'WED', items: ['Faction lore drop: Warrior Class'] },
-  { date: 'Mar 5', label: 'THU', items: ['Faction lore drop: Legendary/Collab teaser (Thanos)'] },
-  { date: 'Mar 8', label: 'SAT', items: ['OG Saturday Event', 'Church Mechanics content: The Runestones'] },
-  { date: 'Mar 10', label: 'MON', items: ['Church Mechanics content: The Offering'] },
-  { date: 'Mar 12', label: 'WED', items: ['WL FOMO post — "seats left, not many"'] },
-  { date: 'Mar 15', label: 'SUN', items: ['5 days to mint — countdown begins'] },
-  { date: 'Mar 17', label: 'TUE', items: ['3 days to mint', 'OG Chaos Trials'] },
-  { date: 'Mar 19', label: 'THU', items: ['1 day to mint — final push'] },
-  { date: 'Mar 20', label: '🎯 MINT', items: ['GIMBOS MINT DAY', 'Risk it for the Church', 'Geez marketplace goes live with PNUTZ'] },
+  { date: 'Mar 9', label: 'TODAY', items: ['Lore bible finalized', 'Art locked (6 keeper images)'] },
+  { date: 'Mar 9-12', label: 'WEEK 1', items: ['The Deacon reveal drop on @apechurch', 'Build world — no mint mention yet', 'Let people ask who he is'] },
+  { date: 'Mar 13-16', label: 'WEEK 2', items: ['The Altar reveal + The Threshold', 'Start connecting the dots', '"The church is real. You\'ve been there."'] },
+  { date: 'Mar 17-20', label: 'WEEK 3', items: ['The Knowing + The Fallen — drop together', '"Which one are you?" poll', 'Announce March 26 mint date'] },
+  { date: 'Mar 21-23', label: 'COUNTDOWN', items: ['Deacon repost with mint details', 'WL mechanics go live', 'Community reposts + hype ramp'] },
+  { date: 'Mar 24-25', label: 'FINAL PUSH', items: ['Countdown posts', 'Last call WL content', '"Tomorrow. The altar opens."'] },
+  { date: 'Mar 26', label: '🎯 MINT', items: ['GIMBOS MINT DAY', 'The Altar image: "The altar is open."', 'Church.'] },
 ]
 
 interface ChatMessage {
@@ -242,8 +235,8 @@ export default function Home() {
               <div className="section-title">Status</div>
               <div className="grid2">
                 <div className="stat">
-                  <div className="num">Mar 20</div>
-                  <div className="label">Mint Date (tentative)</div>
+                  <div className="num">Mar 26</div>
+                  <div className="label">Mint Date (not announced)</div>
                 </div>
                 <div className="stat">
                   <div className="num">{todos.filter(t => t.done).length}/{todos.length}</div>
@@ -282,7 +275,7 @@ export default function Home() {
                 <h3>🤝 Key Partnerships</h3>
                 <p style={{marginTop: 8, fontSize: 13, lineHeight: 2}}>
                   <span style={{display: 'block'}}>→ <span className="highlight">@GeezOnApe</span> — add Gimbos to marketplace, buyable with PNUTZ</span>
-                  <span style={{display: 'block'}}>→ <span className="highlight">@OtherGamesXYZ</span> — Ape Church sponsored events / collab Saturday events</span>
+                  <span style={{display: 'block'}}>→ <span className="highlight">@Bayc364</span> — platform builder, align on mint mechanics</span>
                   <span style={{display: 'block'}}>→ <span className="highlight">@apecoin</span> — ecosystem alignment, cross-promote</span>
                 </p>
               </div>
@@ -299,50 +292,104 @@ export default function Home() {
 
         {tab === 'lore' && (
           <div>
+            {/* Image Gallery */}
             <div className="section">
-              <div className="section-title">Origin</div>
-              <div className="lore-block">
-                <h4>Before the Apes. Before the Kodas.</h4>
-                <p>Long before anyone mapped the biomes of the Otherside, there were the ponds. Hidden in the swampy margins of untamed land, where soil glowed and water held memory. The tadpoles lived there. They absorbed everything — the energy of every bet ever made, every game ever played, every soul that passed through. And then they changed. The Church of the Gimbo is the oldest structure in the Otherside. The Kodas know it exists. They don't talk about it.</p>
-              </div>
-              <div className="lore-block">
-                <h4>The First Offering</h4>
-                <p>The first Gimbo to climb out of the water looked at the Otherside and understood something the others couldn't yet: the only true freedom in a world built and destroyed on the whims of the powerful is the bet. Not luck. The moment where everything could go either way and you still choose to throw. This Gimbo built the altar. Not to a god. To chance itself. The runestones are how they commune with it.</p>
-              </div>
-              <div className="lore-block">
-                <h4>Why They Play</h4>
-                <p>Playing is praying. Every game is a conversation with the universe. You come to the altar, you make an offering — something real, not symbolic — you throw the runestones, and the universe answers. Win or lose, you come back. That's the faith. Not believing you'll win. Believing it's always worth the throw. The altar rewards commitment. Not caution.</p>
-              </div>
-            </div>
-
-            <div className="section">
-              <div className="section-title">The Factions</div>
-              <div className="faction-grid">
+              <div className="section-title">The World — Locked Art</div>
+              <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:12,marginBottom:8}}>
                 {[
-                  { name: 'Stone', color: '#5a8a7a', desc: "Been at the altar since before anyone was watching. Patient. Immovable. Most trusted in the Church. They've seen the runestones fall ten thousand times." },
-                  { name: 'Forest', color: '#4a8c4a', desc: "Oracles. They don't predict the future. They remember futures that already happened somewhere else." },
-                  { name: 'Void', color: '#888', desc: "Lost everything. Came back. Lost it again. Came back again. Even the Church doesn't fully trust them. They always show up when there's something to win." },
-                  { name: 'Tech', color: '#5a7aaa', desc: "Absorbed the Otherside's digital pulse. New converts. Run probability models on their chest panels. Throw the runestones anyway." },
-                  { name: 'Warrior', color: '#c8a84b', desc: "Took on a role. Serve the Church. The ninja protects the altars. The plague doctor tends to those who bet wrong and lost something they can't get back." },
-                ].map(f => (
-                  <div className="faction-card" key={f.name}>
-                    <div className="name" style={{color: f.color}}>{f.name} Gimbo</div>
-                    <div className="desc">{f.desc}</div>
+                  {src:'/gimbos/01_the_threshold.png', title:'The Threshold', sub:'Every Gimbo starts here. You found the door.'},
+                  {src:'/gimbos/03_the_deacon.png', title:'The Deacon', sub:'Been here since before the walls. Seen everything.'},
+                  {src:'/gimbos/04_the_altar.png', title:'The Altar', sub:'Where it happens. Where the universe answers.'},
+                  {src:'/gimbos/05a_the_knowing.png', title:'The Knowing', sub:'Won. Not celebrating. Just knows something.'},
+                  {src:'/gimbos/05a_the_knowing_b.png', title:'The Knowing II', sub:'Everyone else left. Still here.'},
+                  {src:'/gimbos/05b_the_fallen.png', title:'The Fallen', sub:'Lost everything. Still kneeling. Still here.'},
+                ].map((img,i) => (
+                  <div key={i} style={{background:'#0d0d0a',border:'1px solid #2a2a1a',borderRadius:8,overflow:'hidden'}}>
+                    <img src={img.src} alt={img.title} style={{width:'100%',height:220,objectFit:'cover',display:'block'}} />
+                    <div style={{padding:'12px 14px'}}>
+                      <div style={{fontSize:13,fontWeight:700,color:'#c8a84b',marginBottom:4}}>{img.title}</div>
+                      <div style={{fontSize:12,color:'#666',lineHeight:1.5}}>{img.sub}</div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="section">
-              <div className="section-title">The Aesthetic Bible</div>
+              <div className="section-title">What Is a Gimbo</div>
+              <div className="lore-block">
+                <h4>A frog that found the church.</h4>
+                <p>Not because they were chosen. Not because they were worthy. Because they were at the altar when everyone else was somewhere else being careful. Gimbos don't play it safe. They showed up with whatever they had, put it on the altar, and waited. Sometimes the altar answered. Sometimes it didn't. They came back anyway. That's the whole thing.</p>
+              </div>
+              <div className="lore-block">
+                <h4>Playing Is Praying</h4>
+                <p>In the church, there is no difference. The game IS the prayer. When you sit at the altar and make your offering — when you put something real on the line — that IS the act of faith. Not believing in a specific outcome. Believing the act itself is sacred. Losing is tithing. You gave something to the church and it received it. The altar rewards commitment. Not caution.</p>
+              </div>
+            </div>
+
+            <div className="section">
+              <div className="section-title">The Deacon</div>
+              <div style={{display:'grid',gridTemplateColumns:'200px 1fr',gap:20,alignItems:'start'}}>
+                <img src="/gimbos/03_the_deacon.png" alt="The Deacon" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
+                <div>
+                  <div className="lore-block" style={{marginBottom:12}}>
+                    <h4>Nobody knows when he arrived.</h4>
+                    <p>He was just there — seated at the front, facing the altar. Been there since before the walls went up. He doesn't run the church. He doesn't own it. He just watches.</p>
+                  </div>
+                  <div className="lore-block" style={{marginBottom:12}}>
+                    <h4>He is not above any of it.</h4>
+                    <p>He has done things at this altar that people still talk about in the back of the room. Runs that shouldn't have been possible. Losses so catastrophic they became legend. He once put everything he had on a single throw and didn't flinch when it went wrong. Then did it again the next week.</p>
+                  </div>
+                  <div className="lore-block">
+                    <h4>The paradox.</h4>
+                    <p>He is the most unhinged Gimbo who has ever sat in this church. He is also the calmest person in the room. He's quiet not because he's holy. Because there's nothing left to prove. When something true happens at the altar, he nods once. That nod means everything.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="section">
+              <div className="section-title">Blessed and Fallen</div>
+              <div className="grid2">
+                <div style={{background:'#0d0d08',border:'1px solid #3a3a1a',borderRadius:8,overflow:'hidden'}}>
+                  <img src="/gimbos/05a_the_knowing.png" alt="The Knowing" style={{width:'100%',height:180,objectFit:'cover'}} />
+                  <div style={{padding:16}}>
+                    <div style={{fontSize:13,fontWeight:700,color:'#c8a84b',marginBottom:8}}>The Blessed</div>
+                    <p style={{fontSize:13,color:'#888',lineHeight:1.7}}>The altar answered. You won. You're not celebrating — you're sitting with it. Something shifted. You understand something now that can't be explained to someone who hasn't stood at the altar and waited. You'll be back next week. Not out of greed. Out of knowing.</p>
+                  </div>
+                </div>
+                <div style={{background:'#0d0808',border:'1px solid #3a1a1a',borderRadius:8,overflow:'hidden'}}>
+                  <img src="/gimbos/05b_the_fallen.png" alt="The Fallen" style={{width:'100%',height:180,objectFit:'cover'}} />
+                  <div style={{padding:16}}>
+                    <div style={{fontSize:13,fontWeight:700,color:'#c85a5a',marginBottom:8}}>The Fallen</div>
+                    <p style={{fontSize:13,color:'#888',lineHeight:1.7}}>The altar was silent. You lost. You're still kneeling. Still there, in the dark, after everyone else left. You'll be back next week. That's the faith — not believing you'll win. Believing it's always worth the throw. The Fallen are the most devoted members of the church.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="lore-quote" style={{marginTop:16}}>Every Gimbo is one throw from either side. That's not a warning. That's the point.</div>
+            </div>
+
+            <div className="section">
+              <div className="section-title">The Altar</div>
+              <div style={{display:'grid',gridTemplateColumns:'1fr 200px',gap:20,alignItems:'start'}}>
+                <div>
+                  <div className="lore-block">
+                    <h4>Nobody built it.</h4>
+                    <p>The altar has been here longer than the church. Nobody found it and claimed it. It was just there — in the middle of where the church eventually grew up around it. The altar doesn't speak. It doesn't move. It receives offerings and it decides. There is no formula. No trick. No optimal play. What the altar rewards is commitment. Not caution.</p>
+                  </div>
+                </div>
+                <img src="/gimbos/04_the_altar.png" alt="The Altar" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
+              </div>
+            </div>
+
+            <div className="section">
+              <div className="section-title">Voice Guide</div>
               <div className="card">
-                <h3>Renaissance Catholic × Casino × Otherside Chaos</h3>
-                <p style={{marginTop: 10, lineHeight: 2}}>
-                  Leonardo da Vinci hired to document a frog cult casino in a swamp. Baroque drama. Chiaroscuro lighting. Illuminated manuscripts where the saints have been replaced by Gimbos.<br/>
-                  <span className="highlight">The Last Offering</span> — The Last Supper but all Gimbos at the altar table.<br/>
-                  <span className="highlight">Vitruvian Gimbo</span> — Perfect Gimbo form inscribed in circle and square.<br/>
-                  <span className="highlight">The Book of Gimbo</span> — Illuminated manuscript pages, gold leaf, Gimbo script.<br/>
-                  Colors: deep crimson, aged gold, midnight black, forest green, stone grey. Accent: <span style={{color: '#00e5cc'}}>teal (the color of luck)</span>.
+                <p style={{lineHeight:2, fontSize:13}}>
+                  <span className="highlight">Tone:</span> Chaotic. Sincere. Committed to the bit. The joke is that Gimbos are completely serious. Never wink at the camera.<br/>
+                  <span className="green">Write like this:</span> "The altar is open." / "Playing is praying." / "The Deacon nods." / "Church."<br/>
+                  <span style={{color:'#c85a5a'}}>Never write:</span> "Exciting NFT drop" / "Join our community" / "Rare collectible" / anything that sounds like a press release.<br/>
+                  <span className="highlight">The closing word:</span> Church. Use it sparingly. Only when something true just happened.
                 </p>
               </div>
             </div>
@@ -354,10 +401,13 @@ export default function Home() {
             <div className="section">
               <div className="section-title">Campaign Strategy</div>
               <div className="card">
-                <h3>Core Framing</h3>
-                <p style={{marginTop: 8, lineHeight: 1.8}}>Two audiences at once:<br/>
-                  <span className="highlight">The earners</span> (already have WL) — validation. "What you've been grinding toward is real and it's this."<br/>
-                  <span className="highlight">The outsiders</span> (don't have WL) — FOMO. "Look what these people are about to get. There's still time."
+                <h3>The Arc — 17 Days to March 26</h3>
+                <p style={{marginTop: 8, lineHeight: 1.8}}>
+                  <span className="highlight">Mar 9-12:</span> World building. Drop The Deacon. No mint mention. Let people ask who he is.<br/>
+                  <span className="highlight">Mar 13-16:</span> The Altar + The Threshold. Start connecting the dots.<br/>
+                  <span className="highlight">Mar 17-20:</span> The Knowing + The Fallen together. "Which one are you?" poll. Announce March 26.<br/>
+                  <span className="highlight">Mar 21-25:</span> Countdown. WL mechanics. Final push.<br/>
+                  <span className="highlight">Mar 26:</span> The Altar image. "The altar is open." Church.
                 </p>
               </div>
               <div className="card">
@@ -369,11 +419,11 @@ export default function Home() {
             <div className="section">
               <div className="section-title">Content Drops — Ready to Post</div>
               {[
-                { label: 'Speculation Video Caption', content: 'They were here before everyone else.\n\nGimbos. March 20.\n\nYou\'ve been playing. You\'ve been earning.\n\nTime to find out what for.' },
-                { label: 'Stone Gimbo Lore Drop', content: 'Stone Gimbos don\'t rush.\n\nThey\'ve been at the altar longer than you\'ve known this place existed.\n\nWeekly. Every week. Offering after offering.\n\nThe Church noticed.\n\nYou think grinding the leaderboard is new? They invented it.' },
-                { label: 'Void Gimbo Lore Drop', content: 'Lost everything.\nCame back.\nLost it again.\nCame back again.\n\nThe void Gimbo doesn\'t fear the altar.\n\nThe altar fears the void Gimbo.\n\nSome things you can\'t scare away from the game.' },
-                { label: 'Mint Day Post', content: 'Today is the day.\n\nYou played. You earned. You made your offerings.\n\nThe altar is open.\n\nGimbos mint now.\n\nRisk it for the Church.' },
-                { label: 'Cross-Chain Invite', content: 'Your chain doesn\'t matter.\nYour tokens can be converted.\n\nThe Church has one requirement:\nyou show up with something to bet.\n\nThe bridge is open. The altar is waiting.' },
+                { label: 'Deacon Reveal (post first)', content: 'The most unhinged Gimbo in the church is also the calmest person in the room.\n\nHe\'s done things at this altar that people still talk about in the back.\n\nRuns that shouldn\'t have been possible.\nLosses that became legend.\n\nHe was back the next week.\n\nHe\'s always back.\n\nChurch.' },
+                { label: 'The Altar Drop', content: 'Nobody built it.\n\nThe altar was just there — in the middle of where the church eventually grew up around it.\n\nIt doesn\'t speak. It doesn\'t move.\n\nIt receives offerings and it decides.\n\nThere is no formula. No trick. No optimal play.\n\nWhat the altar rewards is commitment.\n\nNot caution.' },
+                { label: 'Blessed vs Fallen (with poll)', content: 'Every Gimbo is one throw from either side.\n\nThe Blessed don\'t celebrate.\nThey just know.\n\nThe Fallen don\'t leave.\nThey kneel in the dark after everyone else is gone.\nAnd they come back.\n\nWhich one are you?' },
+                { label: 'Mint Day', content: 'The altar is open.\n\nChurch.' },
+                { label: 'Deacon Follow-up (day after reveal)', content: 'He\'s been here since before the church had walls.\n\nNobody knows what he\'s lost.\n\nNobody knows what he\'s won.\n\nHe\'s not saying.\n\nChurch.' },
               ].map((item, i) => (
                 <div className="card" key={i}>
                   <h3 style={{fontSize: 12, color: '#c8a84b', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 10}}>{item.label}</h3>
