@@ -137,22 +137,23 @@ export default function Home() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Pirata+One&display=swap');
+        @font-face { font-family: 'Nohemia'; src: url('/nohemia.ttf') format('truetype'); font-display: swap; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #0F1417; color: #e8ecef; font-family: 'Roboto', sans-serif; min-height: 100vh; }
+        body { background: #0F1417; color: #e8ecef; font-family: 'Roboto', sans-serif; min-height: 100vh; background-image: radial-gradient(ellipse at top, #141C23 0%, #0F1417 60%); }
         .app { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
         .header { border-bottom: 1px solid #1B2125; padding-bottom: 20px; margin-bottom: 24px; display: flex; align-items: baseline; gap: 16px; }
-        .logo { font-size: 28px; font-weight: 700; color: #8CFF00; letter-spacing: 0.05em; text-transform: uppercase; }
-        .logo span { color: #A8B0B5; font-weight: 400; font-size: 20px; }
-        .subtitle { font-size: 13px; color: #616669; }
+        .logo { font-size: 36px; font-weight: 400; color: #8CFF00; letter-spacing: 0.04em; font-family: 'Pirata One', cursive; text-shadow: 0 0 20px #8CFF0044; }
+        .logo span { color: #A8B0B5; font-size: 22px; font-family: 'Nohemia', sans-serif; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; }
+        .subtitle { font-size: 12px; color: #616669; font-family: 'Roboto', sans-serif; letter-spacing: 0.05em; }
         .tabs { display: flex; gap: 4px; margin-bottom: 28px; flex-wrap: wrap; }
         .tab { padding: 8px 16px; border: 1px solid #1B2125; background: transparent; color: #A8B0B5; cursor: pointer; font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
         .tab:hover { color: #8CFF00; border-color: #8CFF0044; }
         .tab.active { background: #141C23; border-color: #8CFF00; color: #8CFF00; }
         .section { margin-bottom: 32px; }
-        .section-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #8CFF00; margin-bottom: 16px; font-weight: 600; }
+        .section-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #8CFF00; margin-bottom: 16px; font-weight: 600; font-family: 'Nohemia', sans-serif; }
         .card { background: #141C23; border: 1px solid #1B2125; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
-        .card h3 { font-size: 15px; color: #e8ecef; margin-bottom: 8px; font-weight: 600; }
+        .card h3 { font-size: 15px; color: #e8ecef; margin-bottom: 8px; font-weight: 600; font-family: 'Nohemia', sans-serif; letter-spacing: 0.05em; }
         .card p { font-size: 13px; color: #A8B0B5; line-height: 1.7; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         @media(max-width: 600px) { .grid2 { grid-template-columns: 1fr; } }
@@ -180,9 +181,11 @@ export default function Home() {
         .cal-row.mint { background: #141C23; border-radius: 6px; padding: 12px; border: 1px solid #8CFF0044; }
         .cal-row.mint .cal-item { color: #8CFF00; font-weight: bold; }
         .lore-block { border-left: 3px solid #3A70FF; padding-left: 16px; margin-bottom: 20px; }
-        .lore-block h4 { font-size: 14px; color: #8CFF00; margin-bottom: 6px; font-weight: 600; }
+        .lore-block h4 { font-size: 18px; color: #8CFF00; margin-bottom: 6px; font-family: 'Pirata One', cursive; font-weight: 400; text-shadow: 0 0 12px #8CFF0033; }
         .lore-block p { font-size: 13px; color: #A8B0B5; line-height: 1.8; }
-        .lore-quote { font-style: italic; color: #A8B0B5; border: 1px solid #1B2125; background: #141C23; padding: 16px; border-radius: 6px; margin: 16px 0; font-size: 14px; line-height: 1.8; border-left: 3px solid #8CFF00; }
+        .lore-quote { font-style: normal; color: #e8ecef; border: 1px solid #1B2125; background: #141C23; padding: 20px 24px; border-radius: 6px; margin: 16px 0; font-size: 18px; line-height: 1.7; border-left: 3px solid #8CFF00; font-family: 'Pirata One', cursive; text-shadow: 0 0 8px #8CFF0011; }
+        .pirata { font-family: 'Pirata One', cursive; }
+        .nohemia { font-family: 'Nohemia', sans-serif; letter-spacing: 0.08em; }
         .chat-window { height: 420px; overflow-y: auto; background: #0d1014; border: 1px solid #1B2125; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
         .chat-msg { margin-bottom: 16px; }
         .chat-msg .who { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; font-weight: 600; }
@@ -197,18 +200,19 @@ export default function Home() {
         .btn:hover { background: #1B2125; border-color: #8CFF00; }
         .btn:disabled { opacity: 0.4; cursor: not-allowed; }
         .filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
-        .filter-btn { font-size: 11px; padding: 4px 10px; border-radius: 99px; border: 1px solid #2a2a1a; background: transparent; color: #666; cursor: pointer; font-family: Georgia, serif; }
-        .filter-btn.active { border-color: #c8a84b; color: #c8a84b; background: #1a1a0a; }
+        .filter-btn { font-size: 11px; padding: 4px 10px; border-radius: 99px; border: 1px solid #1B2125; background: transparent; color: #616669; cursor: pointer; font-family: 'Roboto', sans-serif; }
+        .filter-btn.active { border-color: #8CFF00; color: #8CFF00; background: #141C23; }
         .add-row { display: flex; gap: 8px; margin-top: 16px; }
-        .add-row input { flex: 1; background: #111108; border: 1px solid #2a2a1a; color: #e8e8e0; padding: 8px 12px; border-radius: 6px; font-family: Georgia, serif; font-size: 13px; }
-        .add-row input:focus { outline: none; border-color: #c8a84b44; }
-        .notice { background: #1a1a0a; border: 1px solid #2a2a1a; border-radius: 6px; padding: 12px 16px; font-size: 12px; color: #666; line-height: 1.6; }
+        .add-row input { flex: 1; background: #141C23; border: 1px solid #1B2125; color: #e8ecef; padding: 8px 12px; border-radius: 6px; font-family: 'Roboto', sans-serif; font-size: 13px; }
+        .add-row input:focus { outline: none; border-color: #8CFF0044; }
+        .notice { background: #141C23; border: 1px solid #1B2125; border-radius: 6px; padding: 12px 16px; font-size: 12px; color: #616669; line-height: 1.6; }
         .faction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 12px; }
-        .faction-card { background: #0d0d0a; border: 1px solid #2a2a1a; border-radius: 6px; padding: 14px; }
-        .faction-card .name { font-size: 12px; color: #c8a84b; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-        .faction-card .desc { font-size: 12px; color: #777; line-height: 1.5; }
-        .highlight { color: #c8a84b; }
-        .green { color: #4a8c4a; }
+        .faction-card { background: #0d1014; border: 1px solid #1B2125; border-radius: 6px; padding: 14px; }
+        .faction-card .name { font-size: 13px; color: #8CFF00; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; font-family: 'Nohemia', sans-serif; }
+        .faction-card .desc { font-size: 12px; color: #A8B0B5; line-height: 1.5; }
+        .highlight { color: #8CFF00; }
+        .green { color: #8CFF00; }
+        .filter-btn { font-family: 'Roboto', sans-serif; }
       `}</style>
 
       <div className="app">
@@ -248,7 +252,7 @@ export default function Home() {
                 <div className="progress">
                   <div className="progress-bar" style={{width: `${Math.round(todos.filter(t=>t.done).length/todos.length*100)}%`}} />
                 </div>
-                <div style={{fontSize: 11, color: '#666', marginTop: 6}}>{Math.round(todos.filter(t=>t.done).length/todos.length*100)}% complete</div>
+                <div style={{fontSize: 11, color: '#616669', marginTop: 6}}>{Math.round(todos.filter(t=>t.done).length/todos.length*100)}% complete</div>
               </div>
             </div>
 
@@ -269,7 +273,7 @@ export default function Home() {
                       → {t.text}
                     </span>
                   ))}
-                  {todos.filter(t => t.priority === 'high' && !t.done).length === 0 && <span style={{color: '#4a8c4a'}}>All high priority tasks done ✓</span>}
+                  {todos.filter(t => t.priority === 'high' && !t.done).length === 0 && <span style={{color: '#8CFF00'}}>All high priority tasks done ✓</span>}
                 </p>
               </div>
               <div className="card">
@@ -305,11 +309,11 @@ export default function Home() {
                   {src:'/gimboz/05a_the_knowing_b.png', title:'The Knowing II', sub:'Everyone else left. Still here.'},
                   {src:'/gimboz/05b_the_fallen.png', title:'The Fallen', sub:'Lost everything. Still kneeling. Still here.'},
                 ].map((img,i) => (
-                  <div key={i} style={{background:'#0d0d0a',border:'1px solid #2a2a1a',borderRadius:8,overflow:'hidden'}}>
+                  <div key={i} style={{background:'#141C23',border:'1px solid #1B2125',borderRadius:8,overflow:'hidden'}}>
                     <img src={img.src} alt={img.title} style={{width:'100%',height:220,objectFit:'cover',display:'block'}} />
                     <div style={{padding:'12px 14px'}}>
-                      <div style={{fontSize:13,fontWeight:700,color:'#c8a84b',marginBottom:4}}>{img.title}</div>
-                      <div style={{fontSize:12,color:'#666',lineHeight:1.5}}>{img.sub}</div>
+                      <div style={{fontSize:16,fontWeight:400,color:'#8CFF00',marginBottom:4,fontFamily:"'Pirata One', cursive"}}>{img.title}</div>
+                      <div style={{fontSize:12,color:'#A8B0B5',lineHeight:1.5}}>{img.sub}</div>
                     </div>
                   </div>
                 ))}
@@ -331,7 +335,7 @@ export default function Home() {
             <div className="section">
               <div className="section-title">The Deacon</div>
               <div style={{display:'grid',gridTemplateColumns:'200px 1fr',gap:20,alignItems:'start'}}>
-                <img src="/gimboz/03_the_deacon.png" alt="The Deacon" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
+                <img src="/gimboz/03_the_deacon.png" alt="The Deacon" style={{width:'100%',borderRadius:8,border:'1px solid #1B2125'}} />
                 <div>
                   <div className="lore-block" style={{marginBottom:12}}>
                     <h4>Nobody knows when he arrived.</h4>
@@ -355,15 +359,15 @@ export default function Home() {
                 <div style={{background:'#0d0d08',border:'1px solid #3a3a1a',borderRadius:8,overflow:'hidden'}}>
                   <img src="/gimboz/05a_the_knowing.png" alt="The Knowing" style={{width:'100%',height:180,objectFit:'cover'}} />
                   <div style={{padding:16}}>
-                    <div style={{fontSize:13,fontWeight:700,color:'#c8a84b',marginBottom:8}}>The Blessed</div>
+                    <div style={{fontSize:17,fontWeight:400,color:'#8CFF00',fontFamily:"'Pirata One', cursive",marginBottom:8}}>The Blessed</div>
                     <p style={{fontSize:13,color:'#888',lineHeight:1.7}}>The altar answered. You won. You're not celebrating — you're sitting with it. Something shifted. You understand something now that can't be explained to someone who hasn't stood at the altar and waited. You'll be back next week. Not out of greed. Out of knowing.</p>
                   </div>
                 </div>
                 <div style={{background:'#0d0808',border:'1px solid #3a1a1a',borderRadius:8,overflow:'hidden'}}>
                   <img src="/gimboz/05b_the_fallen.png" alt="The Fallen" style={{width:'100%',height:180,objectFit:'cover'}} />
                   <div style={{padding:16}}>
-                    <div style={{fontSize:13,fontWeight:700,color:'#c85a5a',marginBottom:8}}>The Fallen</div>
-                    <p style={{fontSize:13,color:'#888',lineHeight:1.7}}>The altar was silent. You lost. You're still kneeling. Still there, in the dark, after everyone else left. You'll be back next week. That's the faith — not believing you'll win. Believing it's always worth the throw. The Fallen are the most devoted members of the church.</p>
+                    <div style={{fontSize:17,fontWeight:400,color:'#F03333',fontFamily:"'Pirata One', cursive",marginBottom:8}}>The Fallen</div>
+                    <p style={{fontSize:13,color:'#A8B0B5',lineHeight:1.7}}>The altar was silent. You lost. You're still kneeling. Still there, in the dark, after everyone else left. You'll be back next week. That's the faith — not believing you'll win. Believing it's always worth the throw. The Fallen are the most devoted members of the church.</p>
                   </div>
                 </div>
               </div>
@@ -379,7 +383,7 @@ export default function Home() {
                     <p>The altar has been here longer than the church. Nobody found it and claimed it. It was just there — in the middle of where the church eventually grew up around it. The altar doesn't speak. It doesn't move. It receives offerings and it decides. There is no formula. No trick. No optimal play. What the altar rewards is commitment. Not caution.</p>
                   </div>
                 </div>
-                <img src="/gimboz/04_the_altar.png" alt="The Altar" style={{width:'100%',borderRadius:8,border:'1px solid #2a2a1a'}} />
+                <img src="/gimboz/04_the_altar.png" alt="The Altar" style={{width:'100%',borderRadius:8,border:'1px solid #1B2125'}} />
               </div>
             </div>
 
@@ -427,8 +431,8 @@ export default function Home() {
                 { label: 'Deacon Follow-up (day after reveal)', content: 'He\'s been here since before the church had walls.\n\nNobody knows what he\'s lost.\n\nNobody knows what he\'s won.\n\nHe\'s not saying.\n\nChurch.' },
               ].map((item, i) => (
                 <div className="card" key={i}>
-                  <h3 style={{fontSize: 12, color: '#c8a84b', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 10}}>{item.label}</h3>
-                  <pre style={{fontFamily: 'Georgia, serif', fontSize: 13, color: '#aaa', lineHeight: 1.8, whiteSpace: 'pre-wrap'}}>{item.content}</pre>
+                  <h3 style={{fontSize: 12, color: '#8CFF00', letterSpacing: 2, fontFamily: "'Nohemia', sans-serif", textTransform: 'uppercase', marginBottom: 10}}>{item.label}</h3>
+                  <pre style={{fontFamily: "'Roboto', sans-serif", fontSize: 13, color: '#A8B0B5', lineHeight: 1.8, whiteSpace: 'pre-wrap'}}>{item.content}</pre>
                 </div>
               ))}
             </div>
